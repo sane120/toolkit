@@ -25,7 +25,7 @@ class _TasksScreenState extends State<TasksScreen> {
               builder: (BuildContext context) => SingleChildScrollView(
                 child: Container(
                   padding: EdgeInsets.only(
-                    bottom: MediaQuery.of(context).viewInsets.bottom,
+                    bottom: MediaQuery.of(context).viewInsets.top,
                   ),
                   child: AddTaskScreen(),
                 ),
