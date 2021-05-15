@@ -4,7 +4,7 @@ import 'package:flutter_app_numas1/services/networking.dart';
 const apiKey = '18e0de8b60fcf05743a01dc17a83ba05';
 const openWeatherMapURL = 'https://api.openweathermap.org/data/2.5/weather';
 
-class WeatherModel {
+class WeatherModel  {
   Future<dynamic> getCityWeather(String cityName) async {
     NetworkHelper networkHelper = NetworkHelper(
         '$openWeatherMapURL?q=$cityName&appid=$apiKey&units=metric');

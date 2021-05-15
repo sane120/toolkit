@@ -56,7 +56,7 @@ class _TasksScreenState extends State<TasksScreen> {
                       height: 10,
                     ),
                     Text(
-                      'What is ToDo',
+                      'What ToDo',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 50,

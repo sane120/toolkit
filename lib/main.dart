@@ -4,6 +4,7 @@ import 'tracker/price_screen.dart';
 import 'screens/tasks_screen.dart';
 import 'package:provider/provider.dart';
 import 'models/task.dart';
+import 'screens/AboutMe.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,8 +30,9 @@ class Homescreen extends StatelessWidget {
       body: new Container(
         child: new Column(
           children: <Widget>[
+            SizedBox(height: 7 , width: 100,),
           ElevatedButton(
-            child: Text('Weather'),
+            child: Image.asset('images/weather.png', width: 350, height: 100),
             onPressed: () {
             Navigator.push(
             context,
@@ -38,26 +40,48 @@ class Homescreen extends StatelessWidget {
             );
           },
         ),
-          ElevatedButton(
-            child: Text('Coin Tracker'),
-            onPressed: () {
-            Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Tracker()),
-            );
-            },
-          ),
+            SizedBox(height: 7, width: 100,),
             ElevatedButton(
-              child: Text('ToDo List'),
+              child: Image.asset('images/coin.png', width: 350, height: 100),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Tracker()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.yellow,
+              ),
+            ),
+            SizedBox(height: 7, width: 100,),
+            ElevatedButton(
+              child: Image.asset('images/list.png', width: 350, height: 100),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ToDO()),
                 );
               },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.purple,
+              ),
             ),
-            SizedBox(height: 130, width: 100,),
-            Image.asset('images/welcome.png', width: 420, height: 250),
+            SizedBox(height: 2, width: 100,),
+            Material(
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutMe()),
+                    );
+                  },
+                  child: Container(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0),
+                      child: Image.asset('images/welcome.png', width: 450, height: 280),
+                    ),),
+                )
+            )
           ],
         ),
             ),
@@ -91,6 +115,15 @@ class ToDO extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       home: TasksScreen(),
+    );
+  }
+}
+
+class About extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: AboutMe(),
     );
   }
 }
