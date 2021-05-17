@@ -81,6 +81,10 @@ class OurMission extends StatelessWidget {
                             color: Color(0xffb999900),
                         )
                       ),
+                    ])),
+                RichText(
+                  text: TextSpan(
+                    children: [
                       WidgetSpan(
                         child: Icon(Icons.laptop, size: 20, color: Color(0xffb999900),),
                       ),
@@ -91,26 +95,8 @@ class OurMission extends StatelessWidget {
                           )
                       ),
                     ],
-                  ),
-                )
-                // Card(
-                //     margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                //     color: Color(0xffb999900),
-                //     child: ListTile(
-                //       leading: Icon(
-                //         Icons.home,
-                //         color: Color(0xffb666666),
-                //       ),
-                //       title: Text(
-                //         'Freigutstrasse 26, 8002 Zurich',
-                //         style: TextStyle(
-                //             fontSize: 20.0,
-                //             color: Color(0xffb666666),
-                //             fontFamily: 'Source Sans Pro'),
-                //       ),
-                //     ),
-                // ),
-]),
+                  )
+                )]),
       ),
     ));
   }
