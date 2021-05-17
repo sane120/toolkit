@@ -33,7 +33,7 @@ class Homescreen extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 7 , width: 100,),
           ElevatedButton(
-            child: Image.asset('images/weather.png', width: 350, height: 100),
+            child: Image.asset('images/weather.png', width: 350, height: 80),
             onPressed: () {
             Navigator.push(
             context,
@@ -46,7 +46,7 @@ class Homescreen extends StatelessWidget {
         ),
             SizedBox(height: 7, width: 100,),
             ElevatedButton(
-              child: Image.asset('images/coin.png', width: 350, height: 100),
+              child: Image.asset('images/coin.png', width: 350, height: 80),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -59,7 +59,7 @@ class Homescreen extends StatelessWidget {
             ),
             SizedBox(height: 7, width: 100,),
             ElevatedButton(
-              child: Image.asset('images/list.png', width: 350, height: 100),
+              child: Image.asset('images/list.png', width: 350, height: 80),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -72,7 +72,7 @@ class Homescreen extends StatelessWidget {
             ),
             SizedBox(height: 7, width: 100,),
             ElevatedButton(
-              child: Image.asset('images/info.png', width: 350, height: 100),
+              child: Image.asset('images/info.png', width: 350, height: 80),
               onPressed: () {
                 Navigator.push(
                   context,
