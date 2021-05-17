@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_numas1/screens/loading_screen.dart';
+import 'package:flutter_app_numas1/screens/info_screen.dart';
 import 'tracker/price_screen.dart';
 import 'screens/tasks_screen.dart';
 import 'package:provider/provider.dart';
@@ -39,6 +40,9 @@ class Homescreen extends StatelessWidget {
             MaterialPageRoute(builder: (context) => Weather()),
             );
           },
+            style: ElevatedButton.styleFrom(
+              primary: Color(0xffb2980B9),
+            ),
         ),
             SizedBox(height: 7, width: 100,),
             ElevatedButton(
@@ -50,7 +54,7 @@ class Homescreen extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.yellow,
+                primary: Colors.amber,
               ),
             ),
             SizedBox(height: 7, width: 100,),
@@ -63,7 +67,20 @@ class Homescreen extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.purple,
+                primary: Color(0xffb666666),
+              ),
+            ),
+            SizedBox(height: 7, width: 100,),
+            ElevatedButton(
+              child: Image.asset('images/info.png', width: 350, height: 100),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Info()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xffb999900),
               ),
             ),
             SizedBox(height: 2, width: 100,),
