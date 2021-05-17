@@ -10,10 +10,10 @@ class AddTaskScreen extends StatelessWidget {
     return Consumer<Tasks>(
       builder: (context, tasks, child) {
         return Container(
-          color: Color(0xff757575),
+          color: Color(0xffb636301),
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color(0xffb666666),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
@@ -28,13 +28,23 @@ class AddTaskScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30,
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xffb999900),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20, top: 5),
                   child: TextField(
-                    style: TextStyle(fontSize: 22),
+                    style: TextStyle(
+                        color: Color(0xffb999900),
+                        fontSize: 22),
+                    decoration: InputDecoration(
+                      hintText: 'name your task',
+                      hintStyle: TextStyle(fontSize: 13.0, color: Color(0xffb999900)),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xffb999900)),
+                      ),
+                    ),
+                    cursorColor: Color(0xffb999900),
                     textAlign: TextAlign.center,
                     autofocus: true,
                     onChanged: (newTitle) {
@@ -50,7 +60,7 @@ class AddTaskScreen extends StatelessWidget {
                   child: Text(
                     'Add',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color(0xffb666666),
                       fontSize: 20,
                     ),
                   ),
@@ -60,7 +70,7 @@ class AddTaskScreen extends StatelessWidget {
                       Navigator.pop(context);
                     }
                   },
-                  color: Colors.lightBlueAccent,
+                  color: Color(0xffb999900),
                 )
               ],
             ),

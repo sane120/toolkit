@@ -17,7 +17,7 @@ class _TasksScreenState extends State<TasksScreen> {
     return Consumer<Tasks>(
       builder: (context, tasks, child) {
         return Scaffold(
-          backgroundColor: Colors.lightBlueAccent,
+          backgroundColor: Color(0xffb999900),
           floatingActionButton: FloatingActionButton(
             onPressed: () => showModalBottomSheet(
               context: context,
@@ -31,8 +31,11 @@ class _TasksScreenState extends State<TasksScreen> {
                 ),
               ),
             ),
-            backgroundColor: Colors.lightBlueAccent,
-            child: Icon(Icons.add),
+            backgroundColor: Color(0xffb999900),
+            child: Icon(
+                Icons.add,
+                color: Color(0xffb666666),
+          ),
           ),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,9 +50,9 @@ class _TasksScreenState extends State<TasksScreen> {
                       child: Icon(
                         Icons.list,
                         size: 30,
-                        color: Colors.lightBlueAccent,
+                        color: Color(0xffb999900),
                       ),
-                      backgroundColor: Colors.white,
+                      backgroundColor: Color(0xffb666666),
                       radius: 30,
                     ),
                     SizedBox(
@@ -58,7 +61,7 @@ class _TasksScreenState extends State<TasksScreen> {
                     Text(
                       'What ToDo',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xffb666666),
                         fontSize: 50,
                         fontWeight: FontWeight.w700,
                       ),
@@ -66,7 +69,7 @@ class _TasksScreenState extends State<TasksScreen> {
                     Text(
                       '${tasks?.taskCount == null ? 0 : tasks.taskCount} Tasks',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xffb666666),
                         fontSize: 18,
                       ),
                     ),
@@ -81,7 +84,7 @@ class _TasksScreenState extends State<TasksScreen> {
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20),
                     ),
-                    color: Colors.white,
+                    color: Color(0xffb666666),
                   ),
                   child: TasksList(),
                 ),

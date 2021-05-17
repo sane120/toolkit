@@ -31,11 +31,15 @@ class OurMission extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                Expanded(
+                      child: Container(
+                          child: Image.asset('images/numasTeam.jpg', width: 450, height: 400),
+                        ),),
                 Text(
                   'Our Mission',
                   style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 40.0,
+                    fontSize: 30.0,
                     color: Color(0xffb999900),
                     fontWeight: FontWeight.bold,
                   ),
@@ -54,7 +58,7 @@ class OurMission extends StatelessWidget {
                   style: TextStyle(
                           color: Colors.white30,
                           fontFamily: 'Roboto',
-                          fontSize: 22.0,
+                          fontSize: 20.0,
                         ),
                       ),
                 ),
@@ -66,7 +70,7 @@ class OurMission extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 30.0,
+                  height: 20.0,
                   width: 150.0,
                 ),
                 RichText(
@@ -96,7 +100,13 @@ class OurMission extends StatelessWidget {
                       ),
                     ],
                   )
-                )]),
+                ),
+                SizedBox(
+                  height: 40.0,
+                  width: 150.0,
+                ),
+              ]),
+
       ),
     ));
   }

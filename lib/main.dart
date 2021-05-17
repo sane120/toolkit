@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_app_numas1/screens/loading_screen.dart';
 import 'package:flutter_app_numas1/screens/info_screen.dart';
-import 'tracker/price_screen.dart';
+import 'screens/price_screen.dart';
 import 'screens/tasks_screen.dart';
 import 'package:provider/provider.dart';
 import 'models/task.dart';
@@ -26,8 +27,11 @@ class Homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome'),
+        backgroundColor: Color(0xffb999900),
+        title: Text('Welcome',
+        style: TextStyle(color: Colors.white),),
       ),
+      backgroundColor:  Color(0xffb666666),
       body: new Container(
         child: new Column(
           children: <Widget>[
@@ -93,6 +97,7 @@ class Homescreen extends StatelessWidget {
                     );
                   },
                   child: Container(
+                    color: Color(0xffb666666),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10.0),
                       child: Image.asset('images/welcome.png', width: 450, height: 160),
