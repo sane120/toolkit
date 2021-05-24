@@ -42,7 +42,7 @@ class CoinData {
       if (response.statusCode == 200) {
         var decodedData = jsonDecode(response.body);
         double price = decodedData['rate'];
-        cryptoPrices[crypto] = price.toStringAsFixed(0);
+        cryptoPrices[crypto] = price.toStringAsFixed(4);
       } else {
         print(response.statusCode);
         print(requestURL);
