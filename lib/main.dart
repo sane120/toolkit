@@ -17,7 +17,17 @@ class MyApp extends StatelessWidget {
       create: (context) => Tasks()..load(),
       child: MaterialApp(
         theme: ThemeData.dark(),
-        home: Homescreen(),
+        initialRoute: '/',
+        routes: {
+          '/':(context) => Homescreen(),
+          'weather': (context) => Weather(),
+          'tracker': (context) => Tracker(),
+          'ToDo': (context) => ToDO(),
+          'info': (context) => Info(),
+          'aboutme': (context) => AboutMe(),
+
+
+        }
     ),
     );
   }
@@ -39,12 +49,9 @@ class Homescreen extends StatelessWidget {
           ElevatedButton(
             child: Image.asset('images/weather.png', width: 350, height: 80),
             onPressed: () {
-            Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Weather()),
-            );
-          },
-            style: ElevatedButton.styleFrom(
+              Navigator.pushNamed(context, 'weather');
+              },
+              style: ElevatedButton.styleFrom(
               primary: Color(0xffb2980B9),
             ),
         ),
@@ -52,10 +59,8 @@ class Homescreen extends StatelessWidget {
             ElevatedButton(
               child: Image.asset('images/coin.png', width: 350, height: 80),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Tracker()),
-                );
+                // Navigate to the second screen using a named route.
+                Navigator.pushNamed(context, 'tracker');
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.amber,
@@ -65,10 +70,8 @@ class Homescreen extends StatelessWidget {
             ElevatedButton(
               child: Image.asset('images/list.png', width: 350, height: 80),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ToDO()),
-                );
+                // Navigate to the second screen using a named route.
+                Navigator.pushNamed(context, 'ToDo');
               },
               style: ElevatedButton.styleFrom(
                 primary: Color(0xffb666666),
@@ -78,10 +81,8 @@ class Homescreen extends StatelessWidget {
             ElevatedButton(
               child: Image.asset('images/info.png', width: 350, height: 80),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Info()),
-                );
+                // Navigate to the second screen using a named route.
+                Navigator.pushNamed(context, 'info');
               },
               style: ElevatedButton.styleFrom(
                 primary: Color(0xffb999900),
@@ -91,10 +92,8 @@ class Homescreen extends StatelessWidget {
             Material(
                 child: InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AboutMe()),
-                    );
+                    // Navigate to the second screen using a named route.
+                    Navigator.pushNamed(context, 'aboutme');
                   },
                   child: Container(
                     color: Color(0xffb666666),

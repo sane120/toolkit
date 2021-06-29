@@ -99,7 +99,15 @@ class _PriceScreenState extends State<PriceScreen> {
         title: new Text('Coin Ticker',
         style: TextStyle(color: Color(0xffb666666),),),
         backgroundColor: Color(0xffb999900),
-      ),
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back_sharp,  // add custom icons also
+            ),
+          )),
+
       backgroundColor: Color(0xffb666666),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
