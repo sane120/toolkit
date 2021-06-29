@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import '../tracker/coin_data.dart';
 import 'dart:io' show Platform;
+import 'package:flutter_app_numas1/main.dart';
 
 class PriceScreen extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _PriceScreenState extends State<PriceScreen> {
     for (String currency in currenciesList) {
       var newItem = DropdownMenuItem(
         child: Text(currency,
-        style: TextStyle(color: Color(0xffb666666),),),
+          style: TextStyle(color: Color(0xffb666666),),),
         value: currency,
       );
       dropdownItems.add(newItem);
@@ -97,9 +98,16 @@ class _PriceScreenState extends State<PriceScreen> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Coin Ticker',
-        style: TextStyle(color: Color(0xffb666666),),),
+          style: TextStyle(color: Color(0xffb666666),),),
         backgroundColor: Color(0xffb999900),
-      ),
+    leading: GestureDetector(
+    onTap: () {
+      Navigator.pop(context);
+    },
+    child: Icon(
+    Icons.arrow_back_ios,  // add custom icons also
+    ),
+      )),
       backgroundColor: Color(0xffb666666),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
