@@ -66,7 +66,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 children: <Widget>[
                   FlatButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.popUntil(context, ModalRoute.withName('/'));
                     },
                     child: Icon(
                       Icons.arrow_back_ios,
@@ -95,7 +95,7 @@ class _LocationScreenState extends State<LocationScreen> {
                       );
                       if (typedName != null) {
                         var weatherData =
-                        await weather.getCityWeather(typedName);
+                            await weather.getCityWeather(typedName);
                         updateUI(weatherData);
                       }
                     },
