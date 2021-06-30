@@ -1,4 +1,3 @@
-import 'package:flutter_app_numas1/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_numas1/utilities/constants.dart';
 import 'package:flutter_app_numas1/services/weather.dart';
@@ -67,10 +66,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 children: <Widget>[
                   FlatButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Homescreen()),
-                      );
+                      Navigator.pop(context);
                     },
                     child: Icon(
                       Icons.arrow_back_ios,
@@ -99,7 +95,7 @@ class _LocationScreenState extends State<LocationScreen> {
                       );
                       if (typedName != null) {
                         var weatherData =
-                            await weather.getCityWeather(typedName);
+                        await weather.getCityWeather(typedName);
                         updateUI(weatherData);
                       }
                     },

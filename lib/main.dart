@@ -25,8 +25,6 @@ class MyApp extends StatelessWidget {
           'ToDo': (context) => ToDO(),
           'info': (context) => Info(),
           'aboutme': (context) => AboutMe(),
-
-
         }
     ),
     );
@@ -113,38 +111,26 @@ class Homescreen extends StatelessWidget {
 class Weather extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark(),
-      home: LoadingScreen(),
-    );
+    return LoadingScreen();
   }
 }
 class Tracker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-          primaryColor: Colors.lightBlue,
-          scaffoldBackgroundColor: Colors.white),
-      home: PriceScreen(),
-    );
+    return PriceScreen();
   }
 }
 
 class ToDO extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: TasksScreen(),
-    );
+    return TasksScreen();
   }
 }
 
 class About extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: AboutMe(),
-    );
+    return AboutMe();
   }
 }
